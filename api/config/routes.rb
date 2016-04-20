@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  root :to => "teachers#index"
+
+  get 'badges/vote'
+
+  get 'badges/show'
+
+  get 'badges/edit'
+
+  get 'badges/delete'
+
+  get '/api/teachers/:id', to: "teachers#show"
+
+  get 'teachers/edit'
+
+  get 'teachers/delete'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
